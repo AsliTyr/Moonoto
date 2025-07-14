@@ -3,27 +3,25 @@
     x:Class="Moonoto.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:Moonoto"
-    Title="Moonoto">
+    xmlns:views="clr-namespace:Moonoto.Views">
 
-</Shell>
-    
-<TabBar>
-    <Tab Title="Home" Icon="home.png">
-        <ShellContent
-          ContentTemplate="{DataTemplate local:MainPage}"
-          Route="MainPage" />
-   </Tab>
+    <TabBar>
+        <Tab Title="Home" Icon="home.svg">
+            <ShellContent
+          ContentTemplate="{DataTemplate views:HomePage}"
+          Route="HomePage" />
+        </Tab>
 
-   <Tab Title="Search" Icon="home.png">
-       <ShellContent
-          ContentTemplate="{DataTemplate local:SearchPage}"
+        <Tab Title="Search" Icon="search.svg">
+            <ShellContent
+          ContentTemplate="{DataTemplate views:SearchPage}"
           Route="SearchPage" />
-    </Tab>
-    
-    <Tab Title="Library" Icon="home.png">
-        <ShellContent
-          ContentTemplate="{DataTemplate local:LibraryPage}"
+        </Tab>
+
+        <Tab Title="Library" Icon="album_list.svg">
+            <ShellContent
+          ContentTemplate="{DataTemplate views:LibraryPage}"
           Route="LibraryPage" />
-    </Tab>
-</TabBar>
+        </Tab>
+    </TabBar>
+</Shell>
